@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鬼修女-招魂宇宙恐怖电影角色解析与观影指南</title>
+<meta name="description" content="鬼修女（Valak）是招魂宇宙中的经典恐怖角色，本文梳理鬼修女的起源设定、电影作品脉络、角色形象特征、观影顺序建议与常见问题，帮助影迷快速了解这一恐怖电影形象。">
+<meta name="keywords" content="鬼修女,Valak,招魂宇宙,恐怖电影,修女电影,温子仁,恐怖角色">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --ink:#0d0b12;
+  --ink-2:#161320;
+  --ink-3:#1f1a2c;
+  --line:rgba(255,255,255,.10);
+  --gold:#c9a227;
+  --gold-soft:#e3c766;
+  --blood:#8c1c1c;
+  --text:#e8e4ee;
+  --muted:#a49cb5;
+  --radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--ink);
+  color:var(--text);
+  font-family:"Songti SC","Noto Serif SC","Source Han Serif SC",Georgia,"Microsoft YaHei",serif;
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+.wrap{width:min(1180px,92%);margin:0 auto;}
+
+/* ---------- header ---------- */
+header.site-head{
+  position:sticky;top:0;z-index:50;
+  background:rgba(13,11,18,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.head-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;padding:14px 0;
+}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand .mark{
+  width:42px;height:42px;flex:0 0 42px;
+  border:1px solid var(--gold);
+  border-radius:50%;
+  display:grid;place-items:center;
+  font-size:20px;color:var(--gold);
+  position:relative;
+}
+.brand .mark::after{
+  content:"";position:absolute;inset:5px;
+  border:1px dashed rgba(201,162,39,.45);
+  border-radius:50%;
+}
+.brand h1{
+  font-size:19px;font-weight:700;letter-spacing:2px;
+  line-height:1.3;
+}
+.brand h1 span{display:block;font-size:11px;letter-spacing:3px;color:var(--muted);font-weight:400;}
+nav.main-nav ul{display:flex;gap:6px;list-style:none;flex-wrap:wrap;}
+nav.main-nav a{
+  display:block;padding:8px 14px;font-size:14px;color:var(--muted);
+  border-radius:999px;transition:.25s;letter-spacing:1px;
+}
+nav.main-nav a:hover,nav.main-nav a.on{color:var(--gold-soft);background:rgba(201,162,39,.10);}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;
+  padding:78px 0 66px;
+  background:
+    radial-gradient(900px 420px at 78% 8%,rgba(140,28,28,.30),transparent 62%),
+    radial-gradient(700px 380px at 12% 92%,rgba(201,162,39,.14),transparent 60%),
+    linear-gradient(180deg,#0d0b12 0%,#141020 100%);
+  border-bottom:1px solid var(--line);
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);
+  background-size:52px 52px;
+  mask-image:radial-gradient(circle at 50% 40%,#000 10%,transparent 78%);
+  pointer-events:none;
+}
+.hero-grid{
+  position:relative;display:grid;
+  grid-template-columns:1.35fr .95fr;gap:52px;align-items:center;
+}
+.eyebrow{
+  display:inline-block;font-size:12px;letter-spacing:4px;
+  color:var(--gold);border:1px solid rgba(201,162,39,.4);
+  padding:5px 14px;border-radius:999px;margin-bottom:22px;
+}
+.hero h2{
+  font-size:clamp(28px,4.4vw,46px);
+  line-height:1.35;letter-spacing:2px;font-weight:700;
+  margin-bottom:20px;
+}
+.hero h2 em{
+  font-style:normal;color:var(--gold-soft);
+  text-shadow:0 0 26px rgba(201,162,39,.35);
+}
+.hero p.lead{
+  font-size:16px;color:var(--muted);max-width:620px;margin-bottom:28px;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
+.btn{
+  display:inline-block;padding:12px 26px;border-radius:999px;
+  font-size:14px;letter-spacing:2px;transition:.25s;border:1px solid transparent;
+}
+.btn-primary{background:linear-gradient(135deg,#a52020,#6d1414);color:#fff;box-shadow:0 10px 28px rgba(140,28,28,.35);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(140,28,28,.5);}
+.btn-ghost{border-color:rgba(201,162,39,.45);color:var(--gold-soft);}
+.btn-ghost:hover{background:rgba(201,162,39,.12);}
+
+.hero-panel{
+  border:1px solid var(--line);border-radius:var(--radius);
+  background:linear-gradient(160deg,rgba(31,26,44,.9),rgba(13,11,18,.9));
+  padding:26px 24px;
+}
+.hero-panel h3{
+  font-size:14px;letter-spacing:3px;color:var(--gold);
+  padding-bottom:12px;margin-bottom:16px;border-bottom:1px dashed var(--line);
+}
+.hero-panel dl{display:grid;grid-template-columns:auto 1fr;gap:10px 16px;font-size:14px;}
+.hero-panel dt{color:var(--muted);white-space:nowrap;}
+.hero-panel dd{color:var(--text);}
+
+/* ---------- section base ---------- */
+section.block{padding:64px 0;}
+.sec-head{margin-bottom:34px;}
+.sec-head .tag{
+  font-size:12px;letter-spacing:4px;color:var(--gold);display:block;margin-bottom:10px;
+}
+.sec-head h2{
+  font-size:clamp(21px,2.6vw,28px);letter-spacing:2px;font-weight:700;
+  display:inline-block;position:relative;padding-bottom:10px;
+}
+.sec-head h2::after{
+  content:"";position:absolute;left:0;bottom:0;width:52px;height:2px;
+  background:linear-gradient(90deg,var(--gold),transparent);
+}
+.sec-head p.desc{color:var(--muted);font-size:14.5px;margin-top:14px;max-width:800px;}
+
+/* ---------- 起源 ---------- */
+.origin{background:var(--ink-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.origin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px;}
+.origin-card{
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 22px;background:rgba(13,11,18,.55);
+  transition:.3s;
+}
+.origin-card:hover{border-color:rgba(201,162,39,.4);transform:translateY(-4px);}
+.origin-card .num{
+  font-size:26px;color:rgba(201,162,39,.55);font-weight:700;letter-spacing:1px;
+  display:block;margin-bottom:12px;
+}
+.origin-card h3{font-size:16.5px;letter-spacing:1px;margin-bottom:10px;color:var(--gold-soft);}
+.origin-card p{font-size:14px;color:var(--muted);}
+
+/* ---------- 作品脉络 ---------- */
+.films{display:grid;grid-template-columns:1fr;gap:18px;}
+.film{
+  display:grid;grid-template-columns:96px 1fr;gap:22px;
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 24px;background:linear-gradient(120deg,rgba(31,26,44,.75),rgba(13,11,18,.75));
+  transition:.3s;
+}
+.film:hover{border-color:rgba(140,28,28,.6);}
+.film .year{
+  font-size:15px;color:var(--gold);letter-spacing:1px;
+  border-right:1px dashed var(--line);padding-right:18px;
+  display:flex;flex-direction:column;justify-content:center;gap:6px;
+}
+.film .year small{color:var(--muted);font-size:11.5px;letter-spacing:2px;}
+.film h3{font-size:17px;letter-spacing:1px;margin-bottom:8px;}
+.film p{font-size:14px;color:var(--muted);}
+.film .roles{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap;}
+.film .roles span{
+  font-size:11.5px;letter-spacing:1px;color:var(--gold-soft);
+  border:1px solid rgba(201,162,39,.35);border-radius:999px;padding:2px 10px;
+}
+
+/* ---------- 形象解析 ---------- */
+.traits{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.trait{
+  border-left:2px solid var(--blood);
+  padding:6px 0 6px 20px;
+}
+.trait h3{font-size:16px;margin-bottom:8px;letter-spacing:1px;}
+.trait p{font-size:14px;color:var(--muted);}
+
+/* ---------- 观影顺序 ---------- */
+.order{background:var(--ink-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.steps{list-style:none;counter-reset:st;display:grid;gap:14px;}
+.steps li{
+  counter-increment:st;
+  display:grid;grid-template-columns:46px 1fr;gap:18px;align-items:start;
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px 22px;background:rgba(13,11,18,.5);
+}
+.steps li::before{
+  content:counter(st,decimal-leading-zero);
+  font-size:15px;color:var(--gold);letter-spacing:1px;
+  border:1px solid rgba(201,162,39,.4);border-radius:50%;
+  width:34px;height:34px;display:grid;place-items:center;
+}
+.steps h3{font-size:15.5px;margin-bottom:6px;letter-spacing:1px;}
+.steps p{font-size:14px;color:var(--muted);}
+
+/* ---------- FAQ ---------- */
+.faq{display:grid;gap:12px;}
+details{
+  border:1px solid var(--line);border-radius:var(--radius);
+  background:rgba(31,26,44,.5);padding:0 22px;transition:.25s;
+}
+details[open]{border-color:rgba(201,162,39,.4);background:rgba(31,26,44,.8);}
+summary{
+  cursor:pointer;list-style:none;padding:18px 0;
+  font-size:15.5px;letter-spacing:1px;position:relative;padding-right:34px;
+}
+summary::-webkit-details-marker{display:none;}
+summary::after{
+  content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);
+  color:var(--gold);font-size:20px;transition:.25s;
+}
+details[open] summary::after{content:"−";}
+details p{padding:0 0 20px;font-size:14px;color:var(--muted);}
+
+/* ---------- 提示条 ---------- */
+.notice{
+  margin-top:30px;border:1px dashed rgba(201,162,39,.4);
+  border-radius:var(--radius);padding:20px 24px;
+  background:rgba(201,162,39,.06);
+}
+.notice h3{font-size:14.5px;color:var(--gold-soft);letter-spacing:2px;margin-bottom:8px;}
+.notice p{font-size:13.5px;color:var(--muted);}
+
+/* ---------- footer ---------- */
+footer.site-foot{
+  border-top:1px solid var(--line);background:#08070c;
+  padding:44px 0 26px;margin-top:10px;
+}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;}
+.foot-brand h3{font-size:16px;letter-spacing:3px;color:var(--gold-soft);margin-bottom:12px;}
+.foot-brand p{font-size:13.5px;color:var(--muted);max-width:420px;}
+.foot-col h4{font-size:13.5px;letter-spacing:2px;color:var(--text);margin-bottom:14px;}
+.foot-col ul{list-style:none;display:grid;gap:9px;}
+.foot-col a{font-size:13.5px;color:var(--muted);transition:.2s;}
+.foot-col a:hover{color:var(--gold-soft);}
+.copyright{
+  margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
+  font-size:12.5px;color:#6f687f;text-align:center;letter-spacing:1px;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:34px;}
+  .origin-grid{grid-template-columns:1fr;}
+  .traits{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:640px){
+  .head-inner{flex-direction:column;align-items:flex-start;gap:12px;}
+  nav.main-nav ul{gap:2px;}
+  nav.main-nav a{padding:7px 10px;font-size:13px;}
+  .hero{padding:52px 0 46px;}
+  section.block{padding:46px 0;}
+  .film{grid-template-columns:1fr;gap:12px;}
+  .film .year{border-right:none;border-bottom:1px dashed var(--line);padding:0 0 10px;flex-direction:row;gap:10px;align-items:center;}
+  .steps li{grid-template-columns:1fr;gap:10px;}
+  .foot-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <div class="brand">
+      <div class="mark">✟</div>
+      <h1>鬼修女<span>VALAK · 恐怖电影角色档案</span></h1>
+    </div>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a class="on" href="#origin">起源设定</a></li>
+        <li><a href="#films">作品脉络</a></li>
+        <li><a href="#traits">形象解析</a></li>
+        <li><a href="#order">观影顺序</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">招魂宇宙 · 角色专题</span>
+        <h2>鬼修女是谁：<em>从《招魂2》彩蛋到独立系列</em>的恐怖形象</h2>
+        <p class="lead">
+          很多观众第一次记住“鬼修女”，是在《招魂2》里那幅突然出现在走廊尽头的画。这个被称为 Valak 的形象，
+          后来从一段支线情节成长为拥有独立影片的系列角色。本页按起源、作品、形象特征与观影顺序四条线索，
+          把关于鬼修女的关键信息整理清楚，方便你在观影前后快速对照查阅。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#films">查看作品脉络</a>
+          <a class="btn btn-ghost" href="#order">按顺序观影</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-label="角色速览">
+        <h3>角 色 速 览</h3>
+        <dl>
+          <dt>常用名</dt><dd>鬼修女 / Valak</dd>
+          <dt>首次登场</dt><dd>《招魂2》（2016）</dd>
+          <dt>独立影片</dt><dd>《修女》系列</dd>
+          <dt>所属体系</dt><dd>招魂宇宙（The Conjuring Universe）</dd>
+          <dt>形象标识</dt><dd>黑白修女服、苍白面容、黄色瞳孔</dd>
+          <dt>气质基调</dt><dd>宗教意象 + 跳跃惊吓</dd>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 起源 -->
+  <section class="block origin" id="origin">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">ORIGIN</span>
+        <h2>鬼修女的起源与设定来源</h2>
+        <p class="desc">
+          鬼修女并不是一开始就拥有独立故事的原创角色。理解它的来源，有助于看懂这个形象在系列中反复出现的原因，
+          也能分辨哪些属于电影设定、哪些属于现实中的宗教与民俗背景。
+        </p>
+      </div>
+
+      <div class="origin-grid">
+        <article class="origin-card">
+          <span class="num">01</span>
+          <h3>从支线反派起步</h3>
+          <p>
+            在《招魂2》中，故事主线围绕恩菲尔德事件展开，而鬼修女作为隐藏线索穿插其中。
+            它的出现往往与画作、镜面、走廊等视觉元素绑定，用极短的镜头制造记忆点，
+            这种“先做配角、再做主角”的路径，是系列角色扩展的常见方式。
+          </p>
+        </article>
+
+        <article class="origin-card">
+          <span class="num">02</span>
+          <h3>名字与宗教意象</h3>
+          <p>
+            Valak 这一名称在西方神秘学文献中有其出处，电影借用了这一名词，并把它与修女形象结合。
+            修女服本身带有强烈的宗教秩序感，当这种秩序感被扭曲，反差就成为恐怖感的来源之一。
+            需要注意的是，影片属于虚构创作，与真实宗教教义并不等同。
+          </p>
+        </article>
+
+        <article class="origin-card">
+          <span class="num">03</span>
+          <h3>与系列共享世界观</h3>
+          <p>
+            鬼修女出现在招魂宇宙的多部作品中，与安娜贝尔、招魂主线等角色共享同一套世界观框架。
+            这种联动让观众在单部电影之外，还能通过线索串联获得额外信息，
+            也是系列长期维持讨论度的原因之一。
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 作品脉络 -->
+  <section class="block" id="films">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">FILMOGRAPHY</span>
+        <h2>鬼修女相关作品脉络</h2>
+        <p class="desc">
+          按上映时间梳理与该角色相关的主要影片。以下内容仅描述影片定位与角色作用，
+          不涉及关键情节的完整剧透，可作为选片参考。
+        </p>
+      </div>
+
+      <div class="films">
+        <article class="film">
+          <div class="year">2016<small>登场</small></div>
+          <div>
+            <h3>《招魂2》</h3>
+            <p>
+              鬼修女首次以隐藏反派的形式出现，与主线驱魔事件并行推进。
+              它的镜头数量有限，但通过画作与突然出现的画面形成强烈记忆点，
+              也让观众开始关注这个尚未被完整解释的形象。
+            </p>
+            <div class="roles"><span>支线反派</span><span>系列联动</span><span>视觉惊吓</span></div>
+          </div>
+        </article>
+
+        <article class="film">
+          <div class="year">2018<small>独立</small></div>
+          <div>
+            <h3>《修女》</h3>
+            <p>
+              该片把视角前移，讲述与鬼修女相关的起源故事，场景主要设置在修道院环境中。
+              修道院的空间结构、昏暗光线与宗教符号构成了影片主要的氛围来源，
+              也让这个角色第一次拥有完整的前史叙述。
+            </p>
+            <div class="roles"><span>起源故事</span><span>修道院场景</span><span>独立系列</span></div>
+          </div>
+        </article>
+
+        <article class="film">
+          <div class="year">后续<small>延续</small></div>
+          <div>
+            <h3>系列续作与联动作品</h3>
+            <p>
+              随着招魂宇宙持续扩展，鬼修女仍在后续作品中以不同方式被提及或登场。
+              由于系列作品的上映安排会随时间变化，建议以官方发布的信息为准，
+              再决定是否按上映顺序或时间线顺序观看。
+            </p>
+            <div class="roles"><span>世界观联动</span><span>持续更新</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 形象解析 -->
+  <section class="block origin" id="traits">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">CHARACTER</span>
+        <h2>角色形象与恐怖手法解析</h2>
+        <p class="desc">
+          鬼修女之所以令人印象深刻，并不只靠造型，而是造型、镜头语言与声音设计共同作用的结果。
+          下面从四个角度拆解它的表现方式。
+        </p>
+      </div>
+
+      <div class="traits">
+        <article class="trait">
+          <h3>造型：秩序感的反转</h3>
+          <p>
+            黑白修女服本身象征克制与秩序，而角色苍白的面部、深色眼窝与不自然的姿态，
+            把这种秩序感推向反面。观众对修女形象的既有认知，被直接转化为不安来源。
+          </p>
+        </article>
+
+        <article class="trait">
+          <h3>镜头：静态中的突然逼近</h3>
+          <p>
+            影片常让角色先以静止姿态出现在画面边缘或深处，再通过镜头推进或视线转移制造压迫感。
+            相比单纯的突然跳出，这种“先让你看见、再让你确认”的方式更具持续性紧张感。
+          </p>
+        </article>
+
+        <article class="trait">
+          <h3>声音：低频与静默的对比</h3>
+          <p>
+            环境音被刻意压低，低频轰鸣与突然的静默交替出现。
+            声音设计并不总是服务于惊吓瞬间，更多时候用于维持一种持续的不适感。
+          </p>
+        </article>
+
+        <article class="trait">
+          <h3>空间：修道院与封闭场所</h3>
+          <p>
+            走廊、地窖、礼拜堂等封闭空间限制了角色的行动范围，也放大了未知区域的威胁。
+            空间本身成为叙事的一部分，而不仅是背景。
+          </p>
+        </article>
+      </div>
+
+      <div class="notice">
+        <h3>观 影 提 示</h3>
+        <p>
+          恐怖片的惊吓强度因人而异。如果你对突发音效、黑暗场景或宗教题材较为敏感，
+          建议在光线充足的环境中观看，并适当控制连续观看的时长。
+          本页内容为影片信息整理，不构成任何形式的观看建议或价值判断。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 观影顺序 -->
+  <section class="block order" id="order">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">WATCHING ORDER</span>
+        <h2>如何安排鬼修女相关影片的观看顺序</h2>
+        <p class="desc">
+          招魂宇宙的作品既有上映顺序，也有故事时间线顺序，两者并不完全一致。
+          下面给出两种常见思路，你可以根据自己的目的选择。
+        </p>
+      </div>
+
+      <ol class="steps">
+        <li>
+          <div>
+            <h3>按上映顺序观看</h3>
+            <p>
+              先看《招魂2》再进入《修女》，能保留角色首次登场时的未知感。
+              这种方式更接近当年观众的体验，也更容易理解系列如何逐步扩展角色。
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>按故事时间线观看</h3>
+            <p>
+              先看《修女》，再回到《招魂2》，可以按事件发生的先后顺序理解角色来源。
+              这种方式适合希望先弄清设定、再看联动效果的观众。
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>只关注角色线</h3>
+            <p>
+              如果时间有限，可以先集中观看与鬼修女直接相关的作品，
+              再根据兴趣决定是否补看招魂宇宙的其他影片，避免一次性信息过载。
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>注意版本与片长差异</h3>
+            <p>
+              部分影片在不同地区或不同发行版本中可能存在片长与内容差异。
+              观看前可先确认所使用平台的版本信息，以免影响对情节连贯性的判断。
+            </p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">FAQ</span>
+        <h2>关于鬼修女的常见问题</h2>
+        <p class="desc">整理观众在搜索与讨论中经常提出的问题，按需展开阅读。</p>
+      </div>
+
+      <div class="faq">
+        <details open>
+          <summary>鬼修女和 Valak 是同一个角色吗？</summary>
+          <p>
+            在招魂宇宙的设定中，鬼修女这一形象与 Valak 这一名称指向同一角色。
+            “鬼修女”更偏向中文观众对造型的直观称呼，Valak 则是影片中使用的名称。
+          </p>
+        </details>
+
+        <details>
+          <summary>没看过《招魂》系列，能直接看《修女》吗？</summary>
+          <p>
+            可以。《修女》在叙事上相对独立，主要讲述与该角色相关的起源故事。
+            不过先了解招魂宇宙的基本设定，会更容易理解部分联动线索的意义。
+          </p>
+        </details>
+
+        <details>
+          <summary>鬼修女的形象有现实原型吗？</summary>
+          <p>
+            影片属于虚构创作。角色名称借用了西方神秘学文献中的名词，造型则结合了修女服饰与恐怖片常见的视觉手法。
+            将其与现实中的宗教人物或事件直接对应并不准确。
+          </p>
+        </details>
+
+        <details>
+          <summary>为什么鬼修女的出场镜头不多，却很有存在感？</summary>
+          <p>
+            这主要来自镜头的取舍。影片倾向于让角色短暂出现，再通过画作、镜面等物件反复提示它的存在，
+            使观众在角色不在画面中时仍保持警觉，从而延长紧张感。
+          </p>
+        </details>
+
+        <details>
+          <summary>后续还会有鬼修女相关的新作品吗？</summary>
+          <p>
+            系列作品的上映与制作安排会随时间调整，具体信息建议以官方渠道发布为准。
+            本页不对尚未确认的影片计划作任何推测。
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <h3>鬼 修 女 角 色 档 案</h3>
+        <p>
+          一个围绕招魂宇宙中鬼修女形象整理的信息页面，内容涵盖起源设定、作品脉络、
+          形象解析与观影顺序，供影迷在观影前后查阅与对照。
+        </p>
+      </div>
+      <div class="foot-col">
+        <h4>页 面 导 航</h4>
+        <ul>
+          <li><a href="#origin">起源设定</a></li>
+          <li><a href="#films">作品脉络</a></li>
+          <li><a href="#traits">形象解析</a></li>
+          <li><a href="#order">观影顺序</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>相 关 主 题</h4>
+        <ul>
+          <li><a href="#films">招魂宇宙世界观</a></li>
+          <li><a href="#traits">恐怖片镜头语言</a></li>
+          <li><a href="#order">系列观影顺序</a></li>
+          <li><a href="#faq">角色设定辨析</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">本页为影片角色信息整理，内容以公开资料为基础，仅供观影参考。</p>
+  </div>
+</footer>
+
+</body>
+      </html>
