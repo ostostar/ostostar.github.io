@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>bt论坛-BT资源交流与下载讨论社区导航</title>
+<meta name="description" content="bt论坛是面向中文用户的BT资源交流社区，提供种子磁力分享、下载工具讨论、做种保种经验、资源分类导航与新手入门指南，帮助用户安全高效地参与P2P分享。">
+<meta name="keywords" content="bt论坛,BT资源,磁力链接,种子下载,P2P分享,做种保种,下载工具,资源社区">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --bg:#0f1216;
+  --bg-soft:#161b22;
+  --panel:#1b222c;
+  --panel-2:#212a36;
+  --line:#2b3542;
+  --text:#e6edf3;
+  --text-dim:#9aa7b4;
+  --text-mute:#6f7d8c;
+  --accent:#38d39f;
+  --accent-2:#2bb3ff;
+  --warn:#ffb648;
+  --radius:12px;
+  --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:15px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+ul{list-style:none;}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px;}
+
+/* ---------- 顶栏 ---------- */
+.topbar{
+  background:linear-gradient(90deg,#101820,#141e28 45%,#101820);
+  border-bottom:1px solid var(--line);
+  font-size:13px;
+  color:var(--text-mute);
+}
+.topbar .wrap{
+  display:flex;align-items:center;justify-content:space-between;
+  height:38px;gap:16px;flex-wrap:wrap;
+}
+.topbar .notice{display:flex;align-items:center;gap:8px;overflow:hidden;white-space:nowrap;}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none;box-shadow:0 0 0 3px rgba(56,211,159,.15);}
+.topbar .links{display:flex;gap:18px;}
+.topbar .links a:hover{color:var(--accent);}
+
+/* ---------- 页眉 ---------- */
+header.site{
+  background:var(--bg-soft);
+  border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:blur(6px);
+}
+.head-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;height:66px;
+}
+.logo{display:flex;align-items:center;gap:11px;flex:none;}
+.logo .mark{
+  width:38px;height:38px;border-radius:10px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:17px;color:#08131a;letter-spacing:-.5px;
+}
+.logo .txt strong{display:block;font-size:18px;letter-spacing:.5px;line-height:1.2;}
+.logo .txt span{font-size:11.5px;color:var(--text-mute);letter-spacing:1.5px;text-transform:uppercase;}
+
+nav.main{display:flex;gap:4px;flex-wrap:wrap;}
+nav.main a{
+  padding:8px 14px;border-radius:8px;font-size:14.5px;color:var(--text-dim);
+  transition:.18s;
+}
+nav.main a:hover{background:var(--panel);color:var(--text);}
+nav.main a.active{background:rgba(56,211,159,.12);color:var(--accent);font-weight:600;}
+
+.head-actions{display:flex;gap:10px;align-items:center;flex:none;}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  padding:9px 18px;border-radius:9px;font-size:14px;font-weight:600;
+  border:1px solid transparent;cursor:pointer;transition:.18s;white-space:nowrap;
+}
+.btn-primary{background:linear-gradient(135deg,var(--accent),#28b98c);color:#07130e;}
+.btn-primary:hover{filter:brightness(1.08);}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--text-dim);}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  background:
+    radial-gradient(900px 380px at 12% -10%,rgba(56,211,159,.14),transparent 60%),
+    radial-gradient(760px 340px at 88% 0%,rgba(43,179,255,.12),transparent 62%),
+    var(--bg);
+  border-bottom:1px solid var(--line);
+  padding:52px 0 46px;
+}
+.hero-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:40px;align-items:start;}
+.hero h1{font-size:33px;line-height:1.35;letter-spacing:.5px;margin-bottom:16px;}
+.hero h1 em{font-style:normal;color:var(--accent);}
+.hero p.lead{color:var(--text-dim);font-size:15.5px;max-width:640px;margin-bottom:24px;}
+.hero-tags{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:26px;}
+.hero-tags span{
+  font-size:12.5px;color:var(--text-dim);border:1px solid var(--line);
+  background:var(--panel);padding:5px 12px;border-radius:20px;
+}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;}
+.hero-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px;
+  max-width:560px;
+}
+.hero-stats div{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 16px;
+}
+.hero-stats b{display:block;font-size:19px;color:var(--accent);letter-spacing:.5px;}
+.hero-stats small{color:var(--text-mute);font-size:12.5px;}
+
+/* 侧边检索卡 */
+.search-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:16px;
+  padding:22px;box-shadow:0 18px 40px -28px rgba(0,0,0,.9);
+}
+.search-card h3{font-size:16px;margin-bottom:6px;}
+.search-card p{font-size:13px;color:var(--text-mute);margin-bottom:16px;}
+.field{display:flex;gap:8px;margin-bottom:12px;}
+.field input{
+  flex:1;background:var(--bg);border:1px solid var(--line);border-radius:9px;
+  padding:10px 13px;color:var(--text);font-size:14px;outline:none;
+}
+.field input:focus{border-color:var(--accent);}
+.field select{
+  background:var(--bg);border:1px solid var(--line);border-radius:9px;
+  padding:10px 12px;color:var(--text-dim);font-size:13.5px;outline:none;
+}
+.hot-words{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+.hot-words a{
+  font-size:12.5px;color:var(--text-dim);background:var(--bg-soft);
+  border:1px solid var(--line);padding:4px 11px;border-radius:7px;
+}
+.hot-words a:hover{color:var(--accent);border-color:var(--accent);}
+
+/* ---------- 通用区块 ---------- */
+section.block{padding:52px 0;}
+section.block.alt{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:26px;flex-wrap:wrap;}
+.sec-head h2{font-size:22px;letter-spacing:.4px;}
+.sec-head h2::before{
+  content:"";display:inline-block;width:5px;height:19px;border-radius:3px;
+  background:linear-gradient(180deg,var(--accent),var(--accent-2));
+  margin-right:11px;vertical-align:-3px;
+}
+.sec-head p{font-size:13.5px;color:var(--text-mute);margin-top:7px;}
+.sec-head .more{font-size:13.5px;color:var(--accent);}
+
+/* ---------- 版块导航 ---------- */
+.board-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.board{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px;transition:.2s;display:block;
+}
+.board:hover{border-color:rgba(56,211,159,.5);transform:translateY(-3px);}
+.board .ico{
+  width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;
+  font-size:18px;font-weight:700;color:#08131a;margin-bottom:13px;
+  background:linear-gradient(135deg,var(--accent),#2fbf92);
+}
+.board:nth-child(2) .ico{background:linear-gradient(135deg,var(--accent-2),#4f8ff0);}
+.board:nth-child(3) .ico{background:linear-gradient(135deg,#ffb648,#f08b3a);}
+.board:nth-child(4) .ico{background:linear-gradient(135deg,#b98cff,#7a5cf0);}
+.board:nth-child(5) .ico{background:linear-gradient(135deg,#ff7f8a,#e0566a);}
+.board:nth-child(6) .ico{background:linear-gradient(135deg,#5fd6e0,#2fa7bd);}
+.board:nth-child(7) .ico{background:linear-gradient(135deg,#9fd45c,#6aa832);}
+.board:nth-child(8) .ico{background:linear-gradient(135deg,#c0c8d4,#8b96a6);}
+.board h3{font-size:15.5px;margin-bottom:7px;}
+.board p{font-size:13px;color:var(--text-mute);line-height:1.65;margin-bottom:12px;}
+.board .meta{font-size:12px;color:var(--text-dim);display:flex;gap:14px;border-top:1px dashed var(--line);padding-top:11px;}
+.board .meta b{color:var(--accent);font-weight:600;}
+
+/* ---------- 主内容 + 侧栏 ---------- */
+.layout{display:grid;grid-template-columns:1fr 330px;gap:34px;align-items:start;}
+
+/* 资源列表 */
+.res-list{display:flex;flex-direction:column;gap:12px;}
+.res{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 18px;display:flex;gap:16px;align-items:flex-start;transition:.18s;
+}
+.res:hover{border-color:rgba(43,179,255,.45);background:var(--panel-2);}
+.res .tag{
+  flex:none;font-size:11.5px;padding:3px 9px;border-radius:6px;font-weight:600;
+  background:rgba(56,211,159,.13);color:var(--accent);border:1px solid rgba(56,211,159,.25);
+}
+.res .tag.blue{background:rgba(43,179,255,.13);color:var(--accent-2);border-color:rgba(43,179,255,.25);}
+.res .tag.warn{background:rgba(255,182,72,.13);color:var(--warn);border-color:rgba(255,182,72,.25);}
+.res .body{flex:1;min-width:0;}
+.res h3{font-size:15px;margin-bottom:6px;line-height:1.5;}
+.res h3 a:hover{color:var(--accent);}
+.res p{font-size:13px;color:var(--text-mute);margin-bottom:9px;}
+.res .info{font-size:12px;color:var(--text-dim);display:flex;gap:16px;flex-wrap:wrap;}
+.res .info span::before{content:"·";margin-right:6px;color:var(--text-mute);}
+.res .info span:first-child::before{content:"";margin:0;}
+
+/* 侧栏 */
+.side-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px;margin-bottom:18px;
+}
+.side-card h3{
+  font-size:15px;margin-bottom:14px;padding-bottom:11px;border-bottom:1px solid var(--line);
+  display:flex;align-items:center;gap:8px;
+}
+.side-card h3::before{content:"";width:4px;height:14px;border-radius:2px;background:var(--accent);}
+.rank-list li{display:flex;gap:11px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:13.5px;}
+.rank-list li:last-child{border-bottom:0;}
+.rank-list .no{
+  flex:none;width:20px;height:20px;border-radius:5px;background:var(--bg);
+  color:var(--text-mute);font-size:11.5px;display:flex;align-items:center;justify-content:center;font-weight:700;
+}
+.rank-list li:nth-child(1) .no{background:var(--accent);color:#07130e;}
+.rank-list li:nth-child(2) .no{background:var(--accent-2);color:#07130e;}
+.rank-list li:nth-child(3) .no{background:var(--warn);color:#1a1206;}
+.rank-list .t{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--text-dim);}
+.rank-list .t:hover{color:var(--accent);}
+.rank-list .n{flex:none;color:var(--text-mute);font-size:12px;}
+
+.tip-box{
+  background:linear-gradient(160deg,rgba(255,182,72,.09),rgba(255,182,72,.02));
+  border:1px solid rgba(255,182,72,.28);border-radius:var(--radius);padding:18px;
+}
+.tip-box h3{font-size:14.5px;color:var(--warn);margin-bottom:10px;}
+.tip-box ul li{font-size:13px;color:var(--text-dim);padding-left:16px;position:relative;margin-bottom:8px;}
+.tip-box ul li::before{content:"›";position:absolute;left:2px;color:var(--warn);}
+
+/* ---------- 指南 / 步骤 ---------- */
+.guide-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.step{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 20px;position:relative;
+}
+.step .num{
+  font-size:26px;font-weight:800;color:transparent;
+  -webkit-text-stroke:1.4px rgba(56,211,159,.55);line-height:1;margin-bottom:14px;
+}
+.step h3{font-size:15px;margin-bottom:9px;}
+.step p{font-size:13px;color:var(--text-mute);}
+
+/* ---------- 工具对比表 ---------- */
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);}
+table{width:100%;border-collapse:collapse;min-width:640px;font-size:13.5px;}
+thead th{
+  background:var(--panel-2);text-align:left;padding:13px 16px;font-size:13px;
+  color:var(--text-dim);font-weight:600;border-bottom:1px solid var(--line);white-space:nowrap;
+}
+tbody td{padding:13px 16px;border-bottom:1px solid var(--line);color:var(--text-dim);vertical-align:top;}
+tbody tr:last-child td{border-bottom:0;}
+tbody tr:hover td{background:rgba(255,255,255,.02);}
+tbody td:first-child{color:var(--text);font-weight:600;}
+
+/* ---------- FAQ ---------- */
+.faq{display:flex;flex-direction:column;gap:12px;}
+.faq details{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:0 20px;transition:.2s;
+}
+.faq details[open]{border-color:rgba(56,211,159,.4);}
+.faq summary{
+  cursor:pointer;list-style:none;padding:16px 0;font-size:14.5px;font-weight:600;
+  display:flex;justify-content:space-between;align-items:center;gap:14px;
+}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{
+  content:"+";flex:none;color:var(--accent);font-size:19px;font-weight:400;transition:.2s;
+}
+.faq details[open] summary::after{content:"–";}
+.faq .ans{padding:0 0 18px;font-size:13.5px;color:var(--text-dim);border-top:1px dashed var(--line);padding-top:14px;}
+
+/* ---------- 规则/公告 ---------- */
+.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.rule{
+  background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
+  border-radius:10px;padding:20px;
+}
+.rule:nth-child(2){border-left-color:var(--accent-2);}
+.rule:nth-child(3){border-left-color:var(--warn);}
+.rule h3{font-size:14.5px;margin-bottom:9px;}
+.rule p{font-size:13px;color:var(--text-mute);}
+
+/* ---------- 页脚 ---------- */
+footer.site{
+  background:#0b0e12;border-top:1px solid var(--line);padding:44px 0 26px;margin-top:10px;
+}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px;margin-bottom:34px;}
+.foot-brand .logo{margin-bottom:14px;}
+.foot-brand p{font-size:13px;color:var(--text-mute);max-width:320px;}
+.foot-col h4{font-size:13.5px;margin-bottom:14px;color:var(--text);}
+.foot-col li{margin-bottom:9px;}
+.foot-col a{font-size:13px;color:var(--text-mute);}
+.foot-col a:hover{color:var(--accent);}
+.foot-bottom{
+  border-top:1px solid var(--line);padding-top:20px;display:flex;
+  justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--text-mute);
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1024px){
+  .hero-grid{grid-template-columns:1fr;gap:32px;}
+  .layout{grid-template-columns:1fr;}
+  .board-grid{grid-template-columns:repeat(2,1fr);}
+  .guide-grid{grid-template-columns:repeat(2,1fr);}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+  .rules{grid-template-columns:1fr;}
+}
+@media (max-width:720px){
+  .head-inner{height:auto;padding:12px 0;flex-wrap:wrap;gap:12px;}
+  nav.main{order:3;width:100%;overflow-x:auto;padding-bottom:2px;}
+  nav.main a{padding:7px 11px;font-size:13.5px;white-space:nowrap;}
+  .head-actions .btn-ghost{display:none;}
+  .hero{padding:34px 0 32px;}
+  .hero h1{font-size:24px;}
+  .hero-stats{grid-template-columns:1fr 1fr;}
+  .board-grid,.guide-grid{grid-template-columns:1fr;}
+  .sec-head h2{font-size:19px;}
+  section.block{padding:38px 0;}
+  .topbar .links{display:none;}
+  .foot-grid{grid-template-columns:1fr;gap:22px;}
+  .res{flex-direction:column;gap:10px;}
+}
+</style>
+</head>
+<body>
+
+<!-- 顶栏 -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="notice">
+      <span class="dot"></span>
+      <span>社区公告：请遵守当地法律法规，仅讨论与分享拥有合法授权的内容，共同维护健康交流环境。</span>
+    </div>
+    <div class="links">
+      <a href="#guide">新手入门</a>
+      <a href="#rules">社区规则</a>
+      <a href="#faq">常见问题</a>
+    </div>
+  </div>
+</div>
+
+<!-- 页眉 -->
+<header class="site">
+  <div class="wrap head-inner">
+    <a class="logo" href="#top">
+      <span class="mark">BT</span>
+      <span class="txt">
+        <strong>BT论坛</strong>
+        <span>P2P Community</span>
+      </span>
+    </a>
+    <nav class="main">
+      <a class="active" href="#top">首页</a>
+      <a href="#boards">版块导航</a>
+      <a href="#resources">资源分享</a>
+      <a href="#guide">做种指南</a>
+      <a href="#tools">工具对比</a>
+      <a href="#rules">社区规则</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <div class="head-actions">
+      <a class="btn btn-ghost" href="#guide">了解规则</a>
+      <a class="btn btn-primary" href="#boards">进入版块</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>BT论坛：中文用户的 <em>P2P 资源交流与下载讨论</em> 社区</h1>
+        <p class="lead">
+          在这里，你可以了解 BT 下载的基本原理、种子与磁力链接的区别、如何挑选合适的客户端、怎样做种与保种，
+          也能参与资源分类、下载经验、播放方案与网络设置的讨论。无论你是刚接触 P2P 的新手，还是长期做种的老用户，
+          都能找到对应的版块与话题。
+        </p>
+        <div class="hero-tags">
+          <span>种子与磁力</span>
+          <span>客户端选择</span>
+          <span>做种保种</span>
+          <span>下载提速</span>
+          <span>资源分类</span>
+          <span>播放与转码</span>
+          <span>安全与隐私</span>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#boards">浏览版块导航</a>
+          <a class="btn btn-ghost" href="#guide">查看新手入门</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>8 个</b><small>主题讨论版块</small></div>
+          <div><b>4 步</b><small>新手入门流程</small></div>
+          <div><b>6 类</b><small>常见问题解答</small></div>
+        </div>
+      </div>
+
+      <aside class="search-card">
+        <h3>站内检索</h3>
+        <p>按关键词或版块查找你关心的话题</p>
+        <div class="field">
+          <input type="text" id="kw" placeholder="例如：磁力链接、做种、下载速度">
+        </div>
+        <div class="field">
+          <select id="cat">
+            <option>全部版块</option>
+            <option>综合讨论区</option>
+            <option>资源分享区</option>
+            <option>客户端与工具</option>
+            <option>做种与保种</option>
+            <option>网络与端口</option>
+            <option>播放与转码</option>
+            <option>新手求助区</option>
+          </select>
+          <button class="btn btn-primary" type="button" onclick="doSearch()">搜索</button>
+        </div>
+        <p style="font-size:12.5px;color:var(--text-mute);margin:4px 0 0;">热门关键词</p>
+        <div class="hot-words">
+          <a href="#resources">磁力链接</a>
+          <a href="#tools">BT 客户端</a>
+          <a href="#guide">做种教程</a>
+          <a href="#tools">端口映射</a>
+          <a href="#faq">下载慢</a>
+          <a href="#rules">版权说明</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 版块导航 -->
+  <section class="block" id="boards">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>版块导航</h2>
+          <p>按主题划分讨论区域，方便快速定位问题与经验分享</p>
+        </div>
+        <a class="more" href="#resources">查看资源分享区 →</a>
+      </div>
+
+      <div class="board-grid">
+        <a class="board" href="#resources">
+          <div class="ico">综</div>
+          <h3>综合讨论区</h3>
+          <p>P2P 技术闲聊、行业动态、社区事务与站务建议，适合泛话题交流。</p>
+          <div class="meta"><span>讨论帖 <b>综合</b></span><span>适合新手</span></div>
+        </a>
+        <a class="board" href="#resources">
+          <div class="ico">资</div>
+          <h3>资源分享区</h3>
+          <p>按影视、音乐、软件、文档、游戏等分类发布种子与磁力信息，附介绍与校验说明。</p>
+          <div class="meta"><span>分类 <b>6 类</b></span><span>需附说明</span></div>
+        </a>
+        <a class="board" href="#tools">
+          <div class="ico">器</div>
+          <h3>客户端与工具</h3>
+          <p>主流 BT 客户端的特性对比、安装配置、插件扩展与版本更新讨论。</p>
+          <div class="meta"><span>工具 <b>对比</b></span><span>配置经验</span></div>
+        </a>
+        <a class="board" href="#guide">
+          <div class="ico">种</div>
+          <h3>做种与保种</h3>
+          <p>分享率、上传限速、长期保种、私有站点规则等做种相关经验交流。</p>
+          <div class="meta"><span>核心 <b>分享率</b></span><span>长期保种</span></div>
+        </a>
+        <a class="board" href="#tools">
+          <div class="ico">网</div>
+          <h3>网络与端口</h3>
+          <p>端口映射、NAT 类型、IPv6、连接数与限速策略，解决连不上与速度慢的问题。</p>
+          <div class="meta"><span>排障 <b>连接</b></span><span>端口检测</span></div>
+        </a>
+        <a class="board" href="#guide">
+          <div class="ico">播</div>
+          <h3>播放与转码</h3>
+          <p>常见媒体格式的播放方案、字幕匹配、转码参数与设备兼容性讨论。</p>
+          <div class="meta"><span>播放器</span><span>字幕</span></div>
+        </a>
+        <a class="board" href="#rules">
+          <div class="ico">安</div>
+          <h3>安全与隐私</h3>
+          <p>客户端安全设置、避免恶意文件、隐私保护常识与风险提示。</p>
+          <div class="meta"><span>风险提示</span><span>隐私设置</span></div>
+        </a>
+        <a class="board" href="#faq">
+          <div class="ico">助</div>
+          <h3>新手求助区</h3>
+          <p>第一次使用 BT 的疑问集中在这里，提问前建议先阅读置顶入门帖。</p>
+          <div class="meta"><span>入门</span><span>有问必答</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 资源分享 + 侧栏 -->
+  <section class="block alt" id="resources">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>资源分享与讨论精选</h2>
+          <p>以下为版块内的典型话题类型示例，用于说明社区内容结构</p>
+        </div>
+        <a class="more" href="#boards">返回版块 →</a>
+      </div>
+
+      <div class="layout">
+        <div class="res-list">
+          <article class="res">
+            <span class="tag">教程</span>
+            <div class="body">
+              <h3><a href="#guide">从零开始：种子文件与磁力链接到底有什么区别</a></h3>
+              <p>种子是包含文件信息与 Tracker 地址的小文件，磁力链接则通过内容哈希直接定位资源，无需依赖中心服务器。理解两者差异，有助于你在不同场景下选择更合适的方式。</p>
+              <div class="info"><span>综合讨论区</span><span>新手向</span><span>阅读约 6 分钟</span></div>
+            </div>
+          </article>
+
+          <article class="res">
+            <span class="tag blue">工具</span>
+            <div class="body">
+              <h3><a href="#tools">主流 BT 客户端横向对比：轻量、功能与跨平台</a></h3>
+              <p>不同客户端在界面、资源占用、插件生态与远程控制上各有侧重。选择时建议结合设备性能、是否需要 Web 管理以及是否支持 RSS 自动下载等因素综合判断。</p>
+              <div class="info"><span>客户端与工具</span><span>对比评测</span><span>阅读约 8 分钟</span></div>
+            </div>
+          </article>
+
+          <article class="res">
+            <span class="tag warn">排障</span>
+            <div class="body">
+              <h3><a href="#guide">下载速度上不去？从连接数、端口与做种源逐项排查</a></h3>
+              <p>速度受种子健康度、做种人数、本地网络环境与运营商策略等多重因素影响。本文按由易到难的顺序整理排查思路，帮助你定位瓶颈所在。</p>
+              <div class="info"><span>网络与端口</span><span>问题排查</span><span>阅读约 7 分钟</span></div>
+            </div>
+          </article>
+
+          <article class="res">
+            <span class="tag">经验</span>
+            <div class="body">
+              <h3><a href="#guide">什么是分享率？为什么长期做种比一次性下载更重要</a></h3>
+              <p>P2P 网络的健康度依赖参与者持续上传。分享率反映上传与下载的比例，合理的做种习惯既有利于他人，也能让你在需要时获得更好的下载体验。</p>
+              <div class="info"><span>做种与保种</span><span>经验分享</span><span>阅读约 5 分钟</span></div>
+            </div>
+          </article>
+
+          <article class="res">
+            <span class="tag blue">安全</span>
+            <div class="body">
+              <h3><a href="#rules">下载前的安全自查清单：文件类型、来源与扫描建议</a></h3>
+              <p>可执行文件、脚本与伪装扩展名是常见的风险来源。养成查看文件列表、核对体积与格式、必要时先扫描再打开的习惯，能有效降低风险。</p>
+              <div class="info"><span>安全与隐私</span><span>风险提示</span><span>阅读约 6 分钟</span></div>
+            </div>
+          </article>
+
+          <article class="res">
+            <span class="tag">播放</span>
+            <div class="body">
+              <h3><a href="#guide">下载完成之后：常见媒体格式的播放与字幕匹配思路</a></h3>
+              <p>遇到无法播放或字幕不同步时，通常与封装格式、编码方式或字幕时间轴有关。了解基本的排查顺序，可以省去反复下载的时间。</p>
+              <div class="info"><span>播放与转码</span><span>实用技巧</span><span>阅读约 5 分钟</span></div>
+            </div>
+          </article>
+        </div>
+
+        <aside>
+          <div class="side-card">
+            <h3>本周热议话题</h3>
+            <ul class="rank-list">
+              <li><span class="no">1</span><a class="t" href="#guide">磁力链接与种子的选择场景</a><span class="n">热</span></li>
+              <li><span class="no">2</span><a class="t" href="#tools">轻量客户端推荐与配置</a><span class="n">热</span></li>
+              <li><span class="no">3</span><a class="t" href="#guide">如何提高上传分享率</a><span class="n">荐</span></li>
+              <li><span class="no">4</span><a class="t" href="#tools">端口映射失败的常见原因</a><span class="n">新</span></li>
+              <li><span class="no">5</span><a class="t" href="#rules">下载文件的安全自查方法</a><span class="n">新</span></li>
+              <li><span class="no">6</span><a class="t" href="#guide">IPv6 对 P2P 连接的影响</a><span class="n">讨</span></li>
+              <li><span class="no">7</span><a class="t" href="#guide">字幕不同步的排查顺序</a><span class="n">讨</span></li>
+            </ul>
+          </div>
+
+          <div class="tip-box">
+            <h3>⚠ 使用前请注意</h3>
+            <ul>
+              <li>仅分享与获取拥有合法授权或允许传播的内容。</li>
+              <li>遵守所在地关于网络下载与版权保护的法律法规。</li>
+              <li>不要运行来源不明的可执行文件。</li>
+              <li>在公共网络环境下谨慎开启上传与端口监听。</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 新手入门 -->
+  <section class="block" id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>新手入门四步走</h2>
+          <p>从认识概念到完成一次完整下载，按顺序了解即可上手</p>
+        </div>
+      </div>
+
+      <div class="guide-grid">
+        <div class="step">
+          <div class="num">01</div>
+          <h3>理解基本原理</h3>
+          <p>BT 是一种基于 P2P 的分发方式，文件被切成小块，由多个参与者互相提供。参与者越多、做种者越稳定，整体下载体验通常越好。</p>
+        </div>
+        <div class="step">
+          <div class="num">02</div>
+          <h3>选择合适客户端</h3>
+          <p>根据你的设备与使用习惯挑选客户端，关注资源占用、界面易用性、是否支持远程管理与 RSS 订阅。安装时注意来源可靠。</p>
+        </div>
+        <div class="step">
+          <div class="num">03</div>
+          <h3>添加任务并设置</h3>
+          <p>通过种子文件或磁力链接添加任务，合理设置下载目录、连接数与限速，避免占满带宽影响其他网络活动。</p>
+        </div>
+        <div class="step">
+          <div class="num">04</div>
+          <h3>完成后继续做种</h3>
+          <p>下载完成后不要立刻删除任务，保持一段时间的上传有助于网络健康。合理设置上传限速与做种时长，兼顾体验与他人。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 工具对比 -->
+  <section class="block alt" id="tools">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>BT 客户端选择参考维度</h2>
+          <p>下表为通用评估维度，不针对任何特定软件进行推荐或背书</p>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>评估维度</th>
+              <th>说明</th>
+              <th>适合人群</th>
+              <th>注意事项</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>资源占用</td>
+              <td>内存与 CPU 的日常占用水平，影响长时间挂机做种的稳定性。</td>
+              <td>常驻后台、低配设备用户</td>
+              <td>占用低通常意味着功能相对精简。</td>
+            </tr>
+            <tr>
+              <td>界面与易用性</td>
+              <td>任务管理、速度图表、分类标签等是否直观，学习成本高低。</td>
+              <td>初次接触 BT 的新手</td>
+              <td>功能越多，设置项也越多。</td>
+            </tr>
+            <tr>
+              <td>远程与 Web 管理</td>
+              <td>是否支持通过浏览器或手机端查看与控制下载任务。</td>
+              <td>NAS、远程下载场景</td>
+              <td>需注意管理端口的访问安全。</td>
+            </tr>
+            <tr>
+              <td>RSS 与自动下载</td>
+              <td>根据订阅规则自动获取新内容，减少手动操作。</td>
+              <td>有固定订阅需求的用户</td>
+              <td>规则配置需要一定学习时间。</td>
+            </tr>
+            <tr>
+              <td>协议与扩展</td>
+              <td>对 IPv6、加密连接、DHT、PEX 等特性的支持程度。</td>
+              <td>关注连接效率的用户</td>
+              <td>部分特性需网络环境配合。</td>
+            </tr>
+            <tr>
+              <td>跨平台支持</td>
+              <td>是否覆盖 Windows、macOS、Linux 及移动端。</td>
+              <td>多设备切换用户</td>
+              <td>不同平台版本功能可能有差异。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="rules" style="margin-top:26px;">
+        <div class="rule">
+          <h3>端口与连接</h3>
+          <p>若长期处于“无法连接”或连接数偏低状态，可检查路由器端口映射、防火墙规则与运营商网络类型，逐一排除限制因素。</p>
+        </div>
+        <div class="rule">
+          <h3>限速策略</h3>
+          <p>上传与下载限速应结合家庭带宽实际情况设置。全速下载可能影响在线视频、游戏等实时应用，建议分时段调整。</p>
+        </div>
+        <div class="rule">
+          <h3>存储与整理</h3>
+          <p>长期做种会持续占用磁盘空间，建议提前规划存储目录，定期整理已完成任务，并保留必要的校验文件。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 社区规则 -->
+  <section class="block" id="rules">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>社区规则与内容边界</h2>
+          <p>一个可持续的交流环境，需要参与者共同维护</p>
+        </div>
+      </div>
+
+      <div class="rules">
+        <div class="rule">
+          <h3>遵守法律法规</h3>
+          <p>请勿发布、传播或索取侵犯版权、违反当地法律法规的内容。社区鼓励讨论技术原理与合法授权的资源分享。</p>
+        </div>
+        <div class="rule">
+          <h3>发布内容需真实</h3>
+          <p>分享资源信息时，应如实描述内容类型、文件构成与格式，不夸大、不误导，避免使用与内容不符的标题。</p>
+        </div>
+        <div class="rule">
+          <h3>理性交流，拒绝攻击</h3>
+          <p>技术讨论允许观点分歧，但请保持礼貌。针对他人的提问耐心解答，避免嘲讽、引战与无意义刷屏。</p>
+        </div>
+        <div class="rule">
+          <h3>保护个人隐私</h3>
+          <p>不要在公开版块泄露自己或他人的 IP、账号、联系方式等信息。涉及远程协助时，请通过可信渠道沟通。</p>
+        </div>
+        <div class="rule">
+          <h3>拒绝恶意文件</h3>
+          <p>严禁以任何形式发布携带恶意代码、捆绑软件或伪装扩展名的文件。发现此类内容请及时举报。</p>
+        </div>
+        <div class="rule">
+          <h3>尊重版块主题</h3>
+          <p>发帖前请确认版块定位，将话题发布在对应区域，便于他人检索，也能获得更准确的回复。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block alt" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>常见问题解答</h2>
+          <p>整理自新手求助区的高频疑问，供快速参考</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <details open>
+          <summary>BT 下载和普通下载有什么区别？</summary>
+          <div class="ans">
+            普通下载通常从单一服务器获取文件，速度受服务器带宽限制。BT 采用 P2P 方式，文件被分割成多个数据块，由多个参与者同时提供，
+            参与的人数越多，理论上可获得更稳定的传输效率。但实际速度仍取决于做种人数、网络环境与本地设置。
+          </div>
+        </details>
+
+        <details>
+          <summary>种子文件和磁力链接应该选哪个？</summary>
+          <div class="ans">
+            种子文件包含完整的文件信息与 Tracker 列表，适合需要精确控制与长期保存的场景；磁力链接体积小、便于传播，
+            通过内容哈希在 DHT 网络中查找来源。两者最终指向同一份内容，可根据获取渠道与使用习惯选择。
+          </div>
+        </details>
+
+        <details>
+          <summary>下载速度很慢，可能是什么原因？</summary>
+          <div class="ans">
+            常见原因包括：做种人数过少、本地端口未开放导致连接数受限、运营商对 P2P 流量存在策略限制、同时运行多个任务抢占带宽、
+            磁盘写入速度成为瓶颈等。建议先查看任务中的连接数与做种者数量，再逐项排查网络设置。
+          </div>
+        </details>
+
+        <details>
+          <summary>下载完成后需要一直做种吗？</summary>
+          <div class="ans">
+            并不强制，但适度做种有利于整个网络的健康。上传可以让他人更快完成下载，也能提升你在社区中的信誉。
+            建议根据磁盘空间、带宽与使用时段设置合理的做种时长与上传限速。
+          </div>
+        </details>
+
+        <details>
+          <summary>如何判断一个资源是否安全？</summary>
+          <div class="ans">
+            可先查看文件列表与扩展名，警惕可执行文件、脚本与异常小的“安装包”；核对文件体积与描述是否一致；
+            必要时先使用安全软件扫描再打开。对于来源不明或描述含糊的资源，建议谨慎处理。
+          </div>
+        </details>
+
+        <details>
+          <summary>使用 BT 需要注意哪些法律与版权问题？</summary>
+          <div class="ans">
+            不同国家和地区对网络下载与版权保护有不同规定。请务必遵守所在地法律法规，仅获取和分享拥有合法授权、
+            允许传播或已进入公共领域的内容。社区不鼓励也不支持任何侵权行为。
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 页脚 -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="logo" href="#top">
+          <span class="mark">BT</span>
+          <span class="txt">
+            <strong>BT论坛</strong>
+            <span>P2P Community</span>
+          </span>
+        </a>
+        <p>一个面向中文用户的 BT 技术交流与资源讨论社区，专注分享 P2P 使用经验、工具配置与安全常识。</p>
+      </div>
+
+      <div class="foot-col">
+        <h4>版块入口</h4>
+        <ul>
+          <li><a href="#boards">综合讨论区</a></li>
+          <li><a href="#resources">资源分享区</a></li>
+          <li><a href="#tools">客户端与工具</a></li>
+          <li><a href="#guide">做种与保种</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>使用帮助</h4>
+        <ul>
+          <li><a href="#guide">新手入门</a></li>
+          <li><a href="#tools">工具对比</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#rules">社区规则</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>相关说明</h4>
+        <ul>
+          <li><a href="#rules">版权与合规提示</a></li>
+          <li><a href="#rules">安全使用建议</a></li>
+          <li><a href="#rules">隐私保护</a></li>
+          <li><a href="#top">返回顶部</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>© 2024 BT论坛 · 本站内容为技术交流与经验分享，请遵守当地法律法规。</span>
+      <span>请勿发布或传播侵犯版权的内容</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function doSearch(){
+  var kw = document.getElementById('kw').value.trim();
+  var cat = document.getElementById('cat').value;
+  var target = '#resources';
+  if(cat.indexOf('工具') > -1 || cat.indexOf('客户端') > -1){ target = '#tools'; }
+  else if(cat.indexOf('做种') > -1 || cat.indexOf('网络') > -1 || cat.indexOf('播放') > -1){ target = '#guide'; }
+  else if(cat.indexOf('新手') > -1){ target = '#faq'; }
+  else if(cat.indexOf('规则') > -1){ target = '#rules'; }
+  if(kw){
+    document.getElementById('kw').value = kw;
+  }
+  var el = document.querySelector(target);
+  if(el){ el.scrollIntoView({behavior:'smooth'}); }
+}
+</script>
+
+</body>
+  </html>
